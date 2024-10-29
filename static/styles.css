@@ -1,0 +1,73 @@
+body {
+	background-color: #000; /* Black background */
+	color: #ddd; /* Light gray text */
+	font-family: "Courier New", monospace; /* Monospace font for a retro look */
+	margin: 0;
+	padding: 20px;
+	text-align: center;
+	line-height: 1.5;
+	overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+h1 {
+	font-size: 28px;
+	text-shadow: 0 0 5px #aaa; /* Soft gray text shadow */
+}
+
+form {
+	border: 2px solid #555; /* Dark gray border */
+	padding: 20px;
+	display: inline-block;
+	box-shadow: 0 0 10px #444; /* Darker gray glow effect */
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.8
+	); /* Slightly transparent black background */
+	border-radius: 5px; /* Rounded corners */
+}
+
+label {
+	display: block;
+	margin: 10px 0;
+	font-size: 14px;
+	color: #ccc; /* Lighter gray for labels */
+}
+
+input[type="text"] {
+	background-color: #222; /* Dark gray background for input */
+	border: 2px solid #555; /* Dark gray border */
+	color: #ddd; /* Light gray text */
+	padding: 5px;
+	width: 300px; /* Slightly wider input */
+	font-size: 16px;
+	font-family: "Courier New", monospace; /* Monospace font for input */
+}
+
+button {
+	background-color: #555; /* Dark gray background */
+	color: #fff; /* White text */
+	border: 2px solid #777; /* Medium gray border */
+	padding: 8px 15px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+	background-color: #444; /* Darker gray on hover */
+	color: #fff; /* Keep text white on hover */
+}
+
+h2 {
+	margin-top: 20px;
+	font-size: 20px;
+	text-shadow: 0 0 5px #aaa; /* Soft gray text shadow */
+}
+
+p {
+	margin-top: 10px;
+	font-size: 16px;
+	color: #ddd; /* Light gray text for output */
+}

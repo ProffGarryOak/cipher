@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cipher App</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='styles.css') }}"
+		/>
+		<script>
+			function copyToClipboard() {
+				const outputText = document.getElementById("outputText").innerText;
+				navigator.clipboard
+					.writeText(outputText)
+					.then(() => {
+						alert("Copied to clipboard!");
+					})
+					.catch((err) => {
+						console.error("Could not copy text: ", err);
+					});
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Cipher and Decipher</h1>
+		<form method="POST" autocomplete="off">
+			<label for="table_key">Table Key:</label>
+			<input
+				type="text"
+				id="table_key"
+				name="table_key"
+				required
+				autocomplete="off"
+			/>
+
+			<label for="cipher_key">Cipher Key:</label>
+			<input
+				type="text"
+				id="cipher_key"
+				name="cipher_key"
+				required
+				autocomplete="off"
+			/>
+
+			<label for="message">Message:</label>
+			<input
+				type="text"
+				id="message"
+				name="message"
+				required
+				autocomplete="off"
+			/>
+			<br />
+			<br />
+			<button type="submit" name="action" value="cipher">Cipher</button>
+			<button type="submit" name="action" value="decipher">Decipher</button>
+		</form>
+
+		{% if result %}
+		<h2>{{ action }}:</h2>
+		<p id="outputText">{{ result }}</p>
+		<button onclick="copyToClipboard()">Copy</button>
+		{% endif %}
+	</body>
+</html>
